@@ -1,0 +1,192 @@
+<title>Carry Me</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body{
+        font-family: 'Segoe UI';
+    }
+    a{
+        color:white;
+        text-decoration: none;
+    }
+    a:hover{
+        color:orange;
+        text-decoration: underline;
+    }
+    .headers{
+        background-color: darkblue;
+        color: white;
+        padding: 30px;
+    }
+    .buttonstyle{
+        color:white;
+        background-color: orange;
+        border-radius: 5px;
+        padding:5px;
+    }
+    .buttonstyle:hover{
+        background-color: blue;
+    }
+    .footer{
+        position: fixed;
+        bottom: 50px;
+        background-color: darkblue;
+        color: white;
+        font-size: 12;
+        font-weight: bold;
+        width: 100%;
+        padding: 20px;
+    }
+    .menubar{
+        visibility:visible;
+        float:right;
+        width:50%;
+        text-align: right;
+        background-color: darkblue;
+    }
+    .contactnumber{
+        width:30%;
+        float:right;
+    }
+    .menuicon{
+        float:right;
+        visibility: hidden;
+        position: absolute;
+    }
+    /*menu starts here*/
+    .menu {
+    background-color: none;
+    color: aqua;
+    padding: 8px;
+    border-radius: 8px;
+    position: relative;
+    display: inline-block;
+    /*border-bottom: 1px dotted black;*/
+}
+.menutext {
+    visibility: hidden;
+    width: 248px;/*56vh;/*400px;*/
+    background-color: darkblue;
+    color: #fff;
+    text-align: left;
+    border-radius: 2px;
+    padding: 5px;
+    position: absolute;
+    z-index: 5;
+    top: -250%;
+    margin-left: -200px;/*-400px;/*-110px;*/
+    margin-top: 90px;
+    float:right;
+    
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.menu .menutext::after {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 150%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.menu:hover .menutext {
+    visibility: visible;
+    opacity: 1;
+}
+.menu table{
+    border-collapse: collapse;
+}
+.menu tr{
+    border-bottom: 1px solid pink;
+}
+.menu td{
+    padding:8px;
+}
+input{
+    margin-top: 10px;
+    padding: 7px;
+}
+input[type=text]{
+width:20%
+}
+input[type=email]{
+    width:100%;
+}
+input[type=password]{
+    width:100%;
+}
+select{
+    width:20%;
+    padding:7px;
+    margin-top: 10px;
+}
+input[type=submit]{
+    width:20%;
+    padding: 8px;
+    background-color: orange;
+    margin-top: 7px;
+    border-radius: 5px;
+    color:white;
+}
+input[type=submit]:hover{
+    background-color: darkblue;
+}
+.error{
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+    padding:5px;
+}
+.seats{
+    background-color: orange;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+}
+/*menu ends here*/
+    @media screen and (max-width: 800px){
+        .menubar{
+            visibility: hidden;
+        }
+        .contactnumber{
+            width:100%;
+        }
+        .menuicon{
+            visibility: visible;
+        }
+        table{
+            width:100%;
+        }
+        input{
+            width:100%;
+        }
+        input[type=submit]{
+            width:100%;
+        }
+        input[type=email]{
+            width:100%;
+        }
+        input[type=password]{
+            width:100%;
+        }
+        select{
+            width: 100%;
+        }
+        .menu{
+            float:right;
+        }
+        .headers{
+            padding: 50px;
+        }
+        td{
+            padding: 0px;
+        }
+        .footer{
+            bottom: 0px;;
+        }
+    }
+</style>
